@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @import "tailwindcss";
 
 @theme{
@@ -5,7 +6,17 @@
   --color-bg: #FFF3C4;
   --color-build: #FFD700;
   --color-border: #C48F00;
-  --color-shadow: #8A5E00;
+  --color-input:  #FFF3C4;
+  --color-input-shadow: #8A5E00;
+  --color-text-input: #111111;
+  --color-button: #FFB703;
+  --color-button-hover: #FFD166;
+  --color-button-shadow: #8A5E00;
+  --color-button-shadow-hover: #FFD166;
+  --color-button-text: #111111;
+  /* --color-shadow: #8A5E00;  */
   --color-border-slot: #5A3D00;
-  
+  --color-menu: #1A1A2E;
+  --color-text-menu: #FFF;
+  --font-pixel: 'Pixelify Sans', sans-serif;
 }
