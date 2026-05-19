@@ -17,12 +17,31 @@
   --color-text-infs: #111111;
   --color-spin: #d62828;
   --color-spin-hover: #ef4444;
-  --color-err: red;
+  --color-close: red;
+  --color-close-bg: white;
   /* --color-shadow: #8A5E00;  */
   --color-border-slot: #5a3d00;
   --color-menu: #1a1a2e;
   --color-text-menu: #fff;
   --font-pixel: "Pixelify Sans", sans-serif;
+  /* --animate-rollenter: RollEnter 0.5s forwards;
+  --animate-rollexit: RollExit 0.5s forwards;
+  @keyframes RollEnter {
+    0% {
+      right: 0%;
+    }
+    100% {
+      right: calc(100%-60px);
+    }
+  }
+  @keyframes RollExit {
+    0% {
+      right: calc(100%-60px);
+    }
+    100% {
+      right: 0%;
+    }
+  } */
 }
 .Exit {
   animation: Exit 0.5s forwards;

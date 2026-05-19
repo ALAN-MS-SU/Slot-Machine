@@ -21,7 +21,7 @@ export function Menu({
   Sort: Slot[];
 }) {
   return (
-    <div className="bg-menu w-2/4 h-full flex flex-col justify-between items-center">
+    <div className="bg-menu w-full lg:max-w-2/5 xl:max-w-1/3 h-full flex flex-col justify-between items-center ">
       <h1 className="text-text-menu font-pixel text-4xl text-center">
         Slot Machine
       </h1>
