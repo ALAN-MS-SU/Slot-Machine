@@ -11,9 +11,9 @@ export function Input({
   "id" | "name"
 >) {
   return (
-    <div className="flex justify-center items-center gap-5">
+    <div className={`flex ${Props.type == "checkbox" ? "flex-row" : "sm:flex-row flex-col"} justify-center items-center gap-5`}>
       <label htmlFor={ID} className="text-text-menu font-pixel text-2xl">
-        {Label}
+        {Label}:
       </label>
       <input
         id={ID}

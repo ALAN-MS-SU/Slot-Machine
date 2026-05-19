@@ -17,7 +17,7 @@ export function Button({
 >) {
   return (
     <button
-      className={`bg-button cursor-pointer text-6xl text-button-text font-pixel shadow-lg shadow-button-shadow hover:bg-button-hover hover:shadow-button-hover transition-all ease-in ${className ? className : ""}`}
+      className={`bg-button cursor-pointer md:text-6xl text-5xl text-button-text font-pixel shadow-lg shadow-button-shadow hover:bg-button-hover hover:shadow-button-hover transition-all ease-in ${className ? className : ""}`}
       {...Props}
     >
       {Icon ? Icon : Label}

@@ -20,7 +20,9 @@ export function SlotRender({
           style={{ animationDelay: `${Time}s` }}
           className="text-text-infs font-pixel text-3xl flex justify-center items-center w-full h-full Enter"
         >
-          {Value}
+          {Value.length > 10
+            ? `${Value.slice(0, 9)}...`
+            : Value}
         </p>
       )}
     </div>

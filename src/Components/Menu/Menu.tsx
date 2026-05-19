@@ -4,7 +4,7 @@ import { Button } from "../Shared/Buttons/Button";
 import { Input } from "../Shared/Inputs/Input";
 import { Slot } from "@/@Types/Machine/Slot/Slot";
 import { Dispatch, RefObject, SetStateAction } from "react";
-
+import { FaTrash } from "react-icons/fa";
 export function Menu({
   Repeat,
   Items,
@@ -21,7 +21,7 @@ export function Menu({
   Sort: Slot[];
 }) {
   return (
-    <div className="bg-menu w-full lg:max-w-2/5 xl:max-w-1/3 h-full flex flex-col justify-between items-center ">
+    <div className="bg-menu w-full lg:max-w-2/5 xl:max-w-1/3 h-full flex flex-col justify-between items-center">
       <h1 className="text-text-menu font-pixel text-4xl text-center">
         Slot Machine
       </h1>
@@ -31,12 +31,14 @@ export function Menu({
             onSubmit={(e) => {
               e.preventDefault();
               const Value = String(new FormData(e.currentTarget).get("Value"));
+              if (Value == "") return;
+              document.querySelector<HTMLInputElement>("#Value")!.value = "";
               SetItems([{ ID: Items.length, Value }, ...Items]);
             }}
           >
             <Input Label="Value" ID={"Value"} type="text" />
           </form>
-          <div className="flex flex-col justify-center items-center w-full mt-10">
+          <div className="flex flex-col justify-center items-center w-full mt-0 md:mt-10">
             <p className="text-text-menu font-pixel text-2xl">Slots</p>
             <div className="flex flex-row justify-center items-center w-full gap-5 ">
               <Button
@@ -46,12 +48,12 @@ export function Menu({
                   }
                 }}
                 Icon={<TbExposureMinus1 className="w-full" />}
-                className="w-30 h-full"
+                className="md:w-30 sm:w-25 w-20 h-full"
               />
               <Button
                 onClick={() => SetSlots(Slots + 1)}
                 Icon={<TbExposurePlus1 className="w-full" />}
-                className="w-30 h-full"
+                className="md:w-30 sm:w-25 w-20 h-full"
               />
             </div>
             <Input
@@ -73,14 +75,24 @@ export function Menu({
           Values
         </h2>
         <div
-          className={`${Items.length > 6 ? "grid grid-cols-2" : "flex flex-col"}`}
+          className={`${Items.length > 6 ? "grid sm:grid-cols-2 grid-cols-1" : "flex flex-col"}`}
         >
           {Items.map((Item, Index) => {
             return (
-              <div key={Index} className="relative">
-                <p className="text-text-infs font-pixel text-3xl text-center border-4 border-solid border-text-infs border-t-0 p-1 overflow-hidden">
-                  {Item.Value}
+              <div
+                key={Index}
+                className="relative border-text-infs border-t-0 overflow-hidden"
+              >
+                <p className="text-text-infs font-pixel md:text-3xl lg:text-lg xl:text-xl text-xl text-center border-4 border-solid p-1">
+                  {Item.Value.length > 12 ? `${Item.Value.slice(0,11)}...` : Item.Value }
                 </p>
+                <Button
+                  className="absolute w-9 h-9 top-1 right-1 p-0 text-close hover:text-button bg-transparent rounded-full hover:bg-transparent shadow-none transition-all ease-in"
+                  onClick={() => {
+                    SetItems(Items.filter((FItem) => FItem.ID != Item.ID));
+                  }}
+                  Icon={<FaTrash className=" text-2xl" />}
+                />
               </div>
             );
           })}
