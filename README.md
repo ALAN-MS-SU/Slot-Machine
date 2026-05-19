@@ -1,4 +1,4 @@
-# Slot Machine 🎰
+# Slot Machine
 
 A slot machine project focused on smooth animations, custom spin logic, and a modern UI built with current web technologies.
 
