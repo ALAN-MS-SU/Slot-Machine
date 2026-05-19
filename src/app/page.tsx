@@ -1,5 +1,6 @@
 "use client";
 import { Slot } from "@/@Types/Machine/Slot/Slot";
+import { AdBar } from "@/Components/Ads/Bar";
 import { Build } from "@/Components/Machine/Build/Build";
 import { Menu } from "@/Components/Menu/Menu";
 import { useRef, useState } from "react";
@@ -25,6 +26,7 @@ export default function Page() {
         Slots={Slots}
         Items={Items}
       />
+      <AdBar />
     </div>
   );
 }
