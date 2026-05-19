@@ -28,8 +28,8 @@ export function Menu({ Repeat, Items, Slots, SetItems, SetSlots, Sort }: {
                               <Button onClick={() => { if (Slots > 1) { SetSlots(Slots - 1) } }} Icon={<TbExposureMinus1 className="w-full" />} className="w-30 h-full" />
                               <Button onClick={() => SetSlots(Slots + 1)} Icon={<TbExposurePlus1 className="w-full" />} className="w-30 h-full" />
                         </div>
-                        <Input ID="Repeat" type="checkbox" Label="Repeat" onChange={() => {
-                              Repeat.current = Repeat.current!
+                        <Input ID="Repeat" type="checkbox" defaultChecked={Repeat.current} Label="Repeat" onChange={() => {
+                              Repeat.current = Repeat.current ? false : true
                         }} />
                   </div>
             </div>}
