@@ -1,23 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 @import "tailwindcss";
 
-@theme{
-  --color-body: #FDFFFC;
-  --color-bg: #FFF3C4;
-  --color-build: #FFD700;
-  --color-border: #C48F00;
-  --color-input:  #FFF3C4;
-  --color-input-shadow: #8A5E00;
+@theme {
+  --color-body: #fdfffc;
+  --color-bg: #fff3c4;
+  --color-build: #ffd700;
+  --color-border: #c48f00;
+  --color-input: #fff3c4;
+  --color-input-shadow: #8a5e00;
   --color-text-input: #111111;
-  --color-button: #FFB703;
-  --color-button-hover: #FFD166;
-  --color-button-shadow: #8A5E00;
-  --color-button-shadow-hover: #FFD166;
+  --color-button: #ffb703;
+  --color-button-hover: #ffd166;
+  --color-button-shadow: #8a5e00;
+  --color-button-shadow-hover: #ffd166;
   --color-button-text: #111111;
-  --color-text-infs: #111111
+  --color-text-infs: #111111;
+  --color-spin: #d62828;
+  --color-spin-hover: #ef4444;
   /* --color-shadow: #8A5E00;  */
-  --color-border-slot: #5A3D00;
-  --color-menu: #1A1A2E;
-  --color-text-menu: #FFF;
-  --font-pixel: 'Pixelify Sans', sans-serif;
+  --color-border-slot: #5a3d00;
+  --color-menu: #1a1a2e;
+  --color-text-menu: #fff;
+  --font-pixel: "Pixelify Sans", sans-serif;
+}
+.Exit {
+  animation: Exit 0.5s forwards;
+}
+.Enter {
+  animation: Enter 0.5s forwards;
+  transform: translateY(-100%);
+}
+@keyframes Exit {
+  0% {
+    transform: translateY(0%);
+    display: block;
+  }
+  100% {
+    transform: translateY(100%);
+    display: none;
+  }
+}
+
+@keyframes Enter {
+  0% {
+    transform: translateY(-100%);
+    display: none;
+  }
+  0.1% {
+    display: block;
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
