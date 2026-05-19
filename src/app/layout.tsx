@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_URL!),
+ 
 
   title: {
     default: "Slot Machine",
@@ -90,7 +91,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-body w-full h-full">{children}</body>
+      <body className="bg-body w-full h-full">
+        <Script
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1829774161270671"
+          crossOrigin="anonymous"
+        />
+        {children}
+      </body>
     </html>
   );
 }
