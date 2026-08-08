@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+// import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
- 
-
+  metadataBase: process.env.NEXT_PUBLIC_URL!,
   title: {
-    default: "Slot Machine",
-    template: "%s | Slot Machine",
+    default: "Free Online Wheel Spinner - Sort Online",
+    template: "%s | Sort Online",
   },
 
   description:
-    "Create and spin custom wheels online for giveaways, games, random choices and fun challenges.",
+    "Create a free custom wheel spinner online. Enter your options, spin the wheel, and pick a random winner for games, giveaways, decisions and more.",
 
   keywords: [
     "wheel spinner",
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     "custom wheel",
   ],
 
-  applicationName: "Slot Machine",
+  applicationName: "Sort Online",
 
   authors: [
     {
@@ -58,12 +57,12 @@ export const metadata: Metadata = {
 
     url: process.env.NEXT_PUBLIC_URL,
 
-    title: "Slot Machine - Free Online Wheel Spinner",
+    title: "Sort Online - Free Online Wheel Spinner",
 
     description:
       "Create custom wheels and spin them online for giveaways, games and random decisions.",
 
-    siteName: "Slot Machine",
+    siteName: "Sort Online",
 
     locale: "en_US",
   },
@@ -71,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Slot Machine - Free Online Wheel Spinner",
+    title: "Sort Online - Free Online Wheel Spinner",
 
     description: "Create custom wheels and spin them online instantly.",
   },
@@ -92,12 +91,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-body w-full h-full">
-        <Script
+        {/* <Script
           async
           strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1829774161270671"
           crossOrigin="anonymous"
-        />
+        /> */}
         {children}
       </body>
     </html>
