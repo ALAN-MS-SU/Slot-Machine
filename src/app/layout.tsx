@@ -5,8 +5,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: process.env.NEXT_PUBLIC_URL!,
   title: {
-    default: "Free Online Wheel Spinner - Sort Online",
-    template: "%s | Sort Online",
+    default: "Slot-Machine",
+    // template: "%s | Sort Online",
   },
 
   description:
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "custom wheel",
   ],
 
-  applicationName: "Sort Online",
+  applicationName: "Slot-Machine",
 
   authors: [
     {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Sort Online - Free Online Wheel Spinner",
+    title: "Slot-Machine",
 
     description: "Create custom wheels and spin them online instantly.",
   },
