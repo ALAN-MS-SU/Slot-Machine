@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: process.env.NEXT_PUBLIC_URL!,
   title: {
     default: "Slot-Machine",
-    // template: "%s | Sort Online",
+    template: "%s | Slot-Machine",
   },
 
   description:
